@@ -29,18 +29,16 @@ type Props = {
 }
 
 export default function About({title, content}: Props) {
-  const ttl = title;
-  const ctt = content;  
   return (
     <>
-    <Head title={ttl}/>
+    <Head title={title}/>
     <Header/>
       <main>
         <h1>
-          {ttl}
+          {title}
         </h1>
         <article>
-          <div dangerouslySetInnerHTML={{__html: ctt || ''}}/>
+          <div dangerouslySetInnerHTML={{__html: content || ''}}/>
         </article>
       </main>
       <Footer/>
