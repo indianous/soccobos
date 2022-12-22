@@ -13,4 +13,4 @@ Hoje foi dado o início do diário do programador. Tenho como o intuíto de desc
 Hoje eu finalizei de um modo bem básico o meu layout e como os dados serão apresentados.
 Ainda não comecei minha estilização **CSS**.
 O único problema que tive foi quando estava implementando o ***getStaticProps***, não obtive sucesso de criar dados utilizando uma classe feita por mim (no caso a classe Posts). Ele sempre me dava o erro (figura 1). Eu só pude utilizar quando eu ao invés de utilizar um objeto do tipo Post tive que utilizar um objeto genérico para funcionar.
-! [Figura 1.](https://imgur.com/a/2otV13o "Erro getStatiProps")
+![Figura 1.](https://i.imgur.com/BONQpZD.jpeg "Erro getStatiProps")
