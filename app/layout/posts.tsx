@@ -5,7 +5,21 @@ type Props = {
     posts: Post[];
 }
 
-export default function Posts({posts}: Props) {
+export default function Posts(props: Props) {
+    const posts = props.posts.map(
+        (post) => {
+            return (
+                new Post(
+                    post.id,
+                    post.title,
+                    post.description,
+                    post.content,
+                    new Date,
+                    new Date,
+                )
+            )
+        }
+    )
   return (
     <div id='listPosts'>
         {

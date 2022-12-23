@@ -22,8 +22,8 @@ export async function getStaticProps (){
     {id: '2', description: 'Menos recentes'}
   ];
   const posts = [
-    { id: 1, title: `Teste ${1}`, description: 'Teste' },
-    { id: 2, title: `Teste ${2}`, description: 'Teste' },
+      { id: 1, title: `Teste ${1}`, description: 'Teste' },
+      { id: 2, title: `Teste ${2}`, description: 'Teste' },
   ];
   const nextPages = {
     currentPage: 1,
@@ -39,11 +39,25 @@ export async function getStaticProps (){
   }
 }
 
-export default function Posts({ title, filterList, posts }: Props) {
-  const nextPages = {
-    currentPage: 1,
-    pages: [1, 2, 3]
-  }
+export default function Posts(props: Props) {
+  const title = props.title;
+  const filterList = props.filterList;
+  const posts = props.posts.map(
+    (post) => {
+      return (
+        new Post(
+          post.id,
+          post.title,
+          post.description,
+          post.content,
+          new Date,
+          new Date,
+        )
+      )
+    }
+  );
+  const nextPages = props.nextPages;
+  
   return (
     <>
       <Head title={title}/>

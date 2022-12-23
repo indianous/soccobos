@@ -28,7 +28,9 @@ type Props = {
   content: string;
 }
 
-export default function About({title, content}: Props) {
+export default function About(props: Props) {
+  const title = props.title;
+  const content = props.content;
   return (
     <>
     <Head title={title}/>
