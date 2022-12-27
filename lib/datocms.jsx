@@ -2,14 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import { Author } from "../app/interfaces/author";
 import { Post } from "../app/interfaces/post";
 
-type Props = {
-    query: string;
-    variables: {limit: number};
-    includeDrafts?: any;
-    excludeInvalid?: any;
-}
-
-export async function request({ query, variables, includeDrafts, excludeInvalid }: Props) {
+export async function request({ query, variables, includeDrafts, excludeInvalid }) {
   const headers = {
     authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
   };

@@ -2,12 +2,12 @@ import React from 'react';
 import Footer from '../../app/layout/footer';
 import Header from '../../app/layout/header';
 import Head from '../../app/layout/head';
-import { InterfacePost } from '../../app/interfaces/post';
+// import { InterfacePost } from '../../app/interfaces/post';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 
 type Props = {
-  post: InterfacePost;
+  post: any;
 }
 
 async function markdownToHtml(content: string){
