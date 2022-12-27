@@ -1,12 +1,12 @@
 export class Hero{
     public title: string;
-    public description: string;
+    public content: string;
 
     constructor(
         title: string,
-        description: string,
+        content: string,
     ){
         this.title = title;
-        this.description = description;
+        this.content = content;
     }
 }

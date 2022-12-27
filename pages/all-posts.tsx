@@ -4,27 +4,26 @@ import Header from '../app/layout/header';
 import Footer from '../app/layout/footer';
 import LayoutPosts from '../app/layout/posts'
 import { Post } from '../app/interfaces/post';
+import { getAllPosts } from '../lib/datocms';
 
 
 // declaração de tipos
 type Props = {
   title: string;
   filterList: Array<{id: string, description: string}>;
-  posts: Array<Post>;
+  posts: Post[];
   nextPages: {pages: number[], currentPage: number}
 }
 
 // atribuição de valores
 export async function getStaticProps (){
+  const data = await getAllPosts();
   const title = 'Todos os Posts';
   const filterList = [
     {id: '1', description: 'Mais recentes'},
     {id: '2', description: 'Menos recentes'}
   ];
-  const posts = [
-      { id: 1, title: `Teste ${1}`, description: 'Teste' },
-      { id: 2, title: `Teste ${2}`, description: 'Teste' },
-  ];
+  const posts = data.allPosts;
   const nextPages = {
     currentPage: 1,
     pages: [1, 2, 3]
@@ -42,20 +41,7 @@ export async function getStaticProps (){
 export default function Posts(props: Props) {
   const title = props.title;
   const filterList = props.filterList;
-  const posts = props.posts.map(
-    (post) => {
-      return (
-        new Post(
-          post.id,
-          post.title,
-          post.description,
-          post.content,
-          new Date,
-          new Date,
-        )
-      )
-    }
-  );
+  const posts = props.posts;
   const nextPages = props.nextPages;
   
   return (

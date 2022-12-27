@@ -7,42 +7,43 @@ import HeroCard from '../app/layout/heroCard';
 import Posts from '../app/layout/posts';
 import { Post } from '../app/interfaces/post';
 import { Hero } from '../app/interfaces/hero';
+import { getAllPosts, getHero } from '../lib/datocms';
 
 type Props = {
+  
   title: string;
   latestPosts: Post[];
   mostViewedPosts: Post[];
-  hero: Hero
+  hero: Hero;
+  data: any;
 }
 
 export async function getStaticProps() {
+
+  const dataPosts = await getAllPosts();
+  const dataHero = await getHero();
   const title = 'blog';
-  const latestPosts = [{id: 1, title: 'f', description: 'f'}, {id: 2, title: 's', description: 's'}];
-  const mostViewedPosts = [{id: 3, title: 't', description: 't'}, {id: 4, title: 'f', description: 'f'}];
-  const hero = {title: 'Título', description: 'Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.'}
+  const latestPosts = dataPosts.allPosts;
+  const mostViewedPosts = dataPosts.allPosts;
+  const hero = dataHero.hero;
+
   return {
     props: {
       title,
       latestPosts,
       mostViewedPosts,
       hero,
+      data: dataHero,
     },
   }
 }
 
 export default function Home(props: Props) {
+
   const title = props.title;
-  const mostViewedPosts = props.mostViewedPosts.map(
-    (post) => {
-      return new Post(post.id, post.title, post.description, post.content, new Date, new Date);
-    }
-  );
-  const latestPosts = props.mostViewedPosts.map(
-    (post) => {
-      return new Post(post.id, post.title, post.description, post.content, new Date, new Date);
-    }
-  );
-  const hero = new Hero(props.hero.title, props.hero.description);
+  const mostViewedPosts = props.mostViewedPosts;
+  const latestPosts = props.latestPosts;
+  const hero = props.hero;
 
   return (
     <>

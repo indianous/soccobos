@@ -8,13 +8,13 @@ type Props = {
 export default function HeroCard(props: Props) {
   const hero = new Hero(
       props.hero.title,
-      props.hero.description,
+      props.hero.content,
     )
 
   return (
     <div>
       <h3>{hero.title}</h3>
-      <p>{hero.description}</p>
+      <p>{hero.content}</p>
     </div>
   )
 }

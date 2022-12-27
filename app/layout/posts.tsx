@@ -1,5 +1,6 @@
 import React from 'react'
 import { Post } from '../interfaces/post'
+import { Author } from '../interfaces/author'
 
 type Props = {
     posts: Post[];
@@ -16,6 +17,7 @@ export default function Posts(props: Props) {
                     post.content,
                     new Date,
                     new Date,
+                    post.author,
                 )
             )
         }
@@ -28,6 +30,7 @@ export default function Posts(props: Props) {
                     return (
                         <div key={index}>
                             <h2>{post.title}</h2>
+                            <h3>{post.author?.name}</h3>
                             <span>{post.description}</span>
                         </div>
                     )

@@ -10,7 +10,7 @@ export default function Nav() {
                 <Link href='/about'>Sobre</Link>
             </ul>
             <ul>
-                <Link href='/posts'>Todos os Posts</Link>
+                <Link href='/all-posts'>Todos os Posts</Link>
             </ul>
         </li>
     </nav>
