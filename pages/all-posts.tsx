@@ -2,7 +2,7 @@ import React from 'react';
 import Head from '../app/layout/head';
 import Header from '../app/layout/header';
 import Footer from '../app/layout/footer';
-import LayoutPosts from '../app/layout/posts'
+import ListPostsCards from '../app/layout/listPostsCards'
 import { Post } from '../app/interfaces/post';
 import { getAllPosts } from '../lib/datocms';
 
@@ -50,22 +50,24 @@ export default function Posts(props: Props) {
       <Header/>
       <main>
         <header>
-          <label htmlFor='filterList'>Filtros</label>
-          <select name="filter" id="filterList">
-            {
-              filterList.map(
-                (filterItem, index) => {
-                return (
-                  <option key={index} value={filterItem.id}>
-                    {filterItem.description}
-                  </option>)
-                }
-              )
-            }
-          </select>
+          <div>
+            <label htmlFor='filterList'>Filtros</label>
+            <select name="filter" id="filterList" className='form-select'>
+              {
+                filterList.map(
+                  (filterItem, index) => {
+                  return (
+                    <option key={index} value={filterItem.id}>
+                      {filterItem.description}
+                    </option>)
+                  }
+                )
+              }
+            </select>
+          </div>
         </header>
         <main>
-          <LayoutPosts posts={posts}/>
+          <ListPostsCards posts={posts}/>
         </main>
         <footer>
           {

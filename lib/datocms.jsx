@@ -1,6 +1,4 @@
 import { GraphQLClient } from "graphql-request";
-import { Author } from "../app/interfaces/author";
-import { Post } from "../app/interfaces/post";
 
 export async function request({ query, variables, includeDrafts, excludeInvalid }) {
   const headers = {

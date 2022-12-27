@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import Footer from '../app/layout/footer';
 import Header from '../app/layout/header';
 import HeroCard from '../app/layout/heroCard';
-import Posts from '../app/layout/posts';
+import ListPostsCards from '../app/layout/listPostsCards';
 import { Post } from '../app/interfaces/post';
 import { Hero } from '../app/interfaces/hero';
 import { getAllPosts, getHero } from '../lib/datocms';
@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
   const dataPosts = await getAllPosts();
   const dataHero = await getHero();
-  const title = 'blog';
+  const title = 'BLOG';
   const latestPosts = dataPosts.allPosts;
   const mostViewedPosts = dataPosts.allPosts;
   const hero = dataHero.hero;
@@ -50,18 +50,14 @@ export default function Home(props: Props) {
       <Head title={title}/>
       <Header/>
       <main>
-        <h1>
-          {title}
-        </h1>
-        <HeroCard hero={hero}/>
-        <div>
-          <h2>Postagens mais vistas!</h2>
-          <Posts posts={mostViewedPosts}/>
+        <div className='container'>
+          <h1>
+            {title}
+          </h1>
         </div>
-        <div>
-          <h2>Ultimas Postagens!</h2>
-          <Posts posts={latestPosts}/>
-        </div>        
+        <HeroCard hero={hero}/>
+          <ListPostsCards title='Postagens mais vistas!' posts={mostViewedPosts}/>
+          <ListPostsCards title='Últimas Postagens!' posts={latestPosts}/>
       </main>
       <Footer/>
     </>
