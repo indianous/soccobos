@@ -5,5 +5,5 @@ type Props = {
 };
 
 export default function Title(props: Props) {
-  return <h1>{props.children}</h1>;
+  return <h1 className="text-3xl mb-4 font-bold">{props.children}</h1>;
 }
