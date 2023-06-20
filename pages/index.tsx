@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import Head from "next/head";
-import { House } from "@phosphor-icons/react";
 import Title from "../components/title";
-import Navigation from "../components/navigation";
+import Container from "../components/container";
+import Hero from "../components/hero";
+import Galery from "../components/galery";
 
 export default function Home() {
   return (
@@ -11,110 +11,13 @@ export default function Home() {
       <Head>
         <title>Soccobos</title>
       </Head>
-      <Navigation />
-      <Title>Soccobos</Title>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <p className="mb-4">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-        consequatur, maxime non numquam architecto, dolorem quibusdam ab ex quae
-        nemo cumque veritatis vitae temporibus quos minima officiis aliquam
-        impedit quia?
-      </p>
-      <footer>
-        <Navigation />
-        <div className="flex justify-center mb-8">
-          <span>Todos os direitos reservados</span>
+      <Container>
+        <div className="mt-4">
+          <Title>Soccobos</Title>
         </div>
-      </footer>
+        <Hero/>
+        <Galery/>
+      </Container>
     </>
   );
 }
