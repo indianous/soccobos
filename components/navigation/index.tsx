@@ -8,8 +8,9 @@ export default function Navigation() {
   const [showSidebar, setShowSidebar] = useState(false);
 
   function toogleShowSideBar() {
-    console.log(showSidebar);
+    console.log("Nav", showSidebar);
     setShowSidebar((state) => !state);
+    console.log("Nav", showSidebar);
   }
 
   return (
@@ -56,12 +57,9 @@ export default function Navigation() {
             <div className="block md:hidden">
               <button
                 className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-                onClick={() => {
-                  setShowSidebar((state) => !state);
-                }}
+                onClick={toogleShowSideBar}
               >
                 <DotsThreeVertical size={24} />
-                {showSidebar ? "v" : "f"}
               </button>
             </div>
           </div>
