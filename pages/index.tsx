@@ -19,7 +19,7 @@ export default function Index({}: IndexProps) {
   />
 
   <div className="bg-white p-4 sm:p-6">
-    <time datetime="2022-10-10" className="block text-xs text-gray-500">
+   {/* <time datetime="2022-10-10" className="block text-xs text-gray-500">*/}
       10th Oct 2022
     </time>
 
