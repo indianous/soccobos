@@ -2,13 +2,9 @@ import { DotsThreeVertical } from "@phosphor-icons/react";
 import Link from "next/link";
 import React, { useState } from "react";
 import Sidebar from "../sidebar";
+import { routes } from "../../src/constants";
 
 export default function Navigation() {
-  const routes = [
-    { url: "/store", text: "Loja" },
-    { url: "/blog", text: "Blog" },
-    { url: "/games", text: "Jogos" },
-  ];
   const [showSidebar, setShowSidebar] = useState(false);
 
   function toogleShowSideBar() {
