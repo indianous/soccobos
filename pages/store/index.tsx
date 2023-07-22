@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
 import Head from "next/head";
+import Link from "next/link";
 
 interface StoreProps {}
 
@@ -11,7 +12,7 @@ export default function Store({}: StoreProps) {
         <title>Store</title>
       </Head>
       <Layout>
-        <a href="#" className="group block">
+        <Link href="/" className="group block">
   <div className="relative h-[350px] sm:h-[450px]">
     <img
       src="https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -38,7 +39,7 @@ export default function Store({}: StoreProps) {
       ab maiores placeat odio id?
     </p>
   </div>
-</a>
+</Link>
       </Layout>
     </>
   );
