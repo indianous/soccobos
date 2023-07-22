@@ -1,7 +1,18 @@
-import React from 'react'
+import React from "react";
+import Layout from "../../components/layout";
+import Head from "next/head";
 
-export default function Privacity() {
+interface PrivacityProps {}
+
+export default function Privacity({}: PrivacityProps) {
   return (
-    <div>Privacity</div>
-  )
+    <>
+      <Head>
+        <title>Privacity</title>
+      </Head>
+      <Layout>
+        <h1>Privacity</h1>
+      </Layout>
+    </>
+  );
 }

@@ -1,7 +1,18 @@
-import React from 'react'
+import React from "react";
+import Layout from "../../components/layout";
+import Head from "next/head";
 
-export default function About() {
+interface AboutProps {}
+
+export default function About({}: AboutProps) {
   return (
-    <div>About</div>
-  )
+    <>
+      <Head>
+        <title>About</title>
+      </Head>
+      <Layout>
+        <h1>About</h1>
+      </Layout>
+    </>
+  );
 }

@@ -1,23 +1,18 @@
 import React from "react";
+import Layout from "../components/layout";
 import Head from "next/head";
-import Title from "../components/title";
-import Container from "../components/container";
-import Hero from "../components/hero";
-import Galery from "../components/galery";
 
-export default function Home() {
+interface IndexProps {}
+
+export default function Index({}: IndexProps) {
   return (
     <>
       <Head>
         <title>Soccobos</title>
       </Head>
-      <Container>
-        <div className="mt-4">
-          <Title>Soccobos</Title>
-        </div>
-        <Hero/>
-        <Galery/>
-      </Container>
+      <Layout>
+        <h1>Soccobos</h1>
+      </Layout>
     </>
   );
 }

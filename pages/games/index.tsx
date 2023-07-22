@@ -2,16 +2,16 @@ import React from "react";
 import Layout from "../../components/layout";
 import Head from "next/head";
 
-interface BlogProps {}
+interface GamesProps {}
 
-export default function Blog({}: BlogProps) {
+export default function Games({}: GamesProps) {
   return (
     <>
       <Head>
-        <title>Blog</title>
+        <title>Games</title>
       </Head>
       <Layout>
-        <h1>Blog</h1>
+        <h1>Games</h1>
       </Layout>
     </>
   );
