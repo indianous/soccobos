@@ -11,7 +11,7 @@ export default function Help({}: HelpProps) {
         <title>Help</title>
       </Head>
       <Layout>
-        <div className="space-y-4">
+        <div className="space-y-4 px-5 mb-4">
   <details
     className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
     open
