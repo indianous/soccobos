@@ -9,7 +9,7 @@ export default function Navigation() {
 
   function toogleShowSideBar() {
     console.log("Nav", showSidebar);
-    setShowSidebar((state) => !state);
+    setShowSidebar((state) => true);
     console.log("Nav", showSidebar);
   }
 
